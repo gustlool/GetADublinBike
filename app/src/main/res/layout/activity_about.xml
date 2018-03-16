@@ -11,7 +11,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:text="This app was created to develop my skills as a student and to learn hot to access API and parse JSON. It can give you a list of the Dublin Bike Stations, check the Weather in a city."
+        android:text="This app was created to develop my skills as a student and to learn hot to access API and parse JSON.
+        It can give you a list of the Dublin Bike Stations, check the Weather in a city."
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
