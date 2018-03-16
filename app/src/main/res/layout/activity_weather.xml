@@ -12,10 +12,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:text="Enter a City..."
-        android:textColorHint="@color/common_google_signin_btn_text_dark_focused"
         android:textSize="30sp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
 
     <EditText
         android:id="@+id/cityName"
@@ -47,7 +46,7 @@
         android:layout_marginBottom="100dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:textColor="@android:color/black"
+        android:textColor="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"

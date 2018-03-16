@@ -25,7 +25,9 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    double[] postLatLng = null;
+    ArrayList<Double> lat = new ArrayList<Double>();
+    ArrayList<Double> lng = new ArrayList<Double>();
+
     //ArrayList<String> posLatLng = new ArrayList<String>();
     ArrayList<String> stations = new ArrayList<String>();
     Bundle b = new Bundle();
@@ -113,19 +115,29 @@ public class MainActivity extends AppCompatActivity {
                     String name = jsonObject.optString("name");
                     System.out.println(name);
 
+                    //Station status
+                    String status = jsonObject.optString("status");
+                    System.out.println(name);
+
+                    //Bikes Available
+                    String bikesAv = jsonObject.optString("available_bikes");
+                    System.out.println(bikesAv);
+
+                    //Stands Available
+                    String standAv = jsonObject.optString("available_bike_stands");
+                    System.out.println(standAv);
+
                     //Get LatLong
                     JSONObject jPos = jsonObject.getJSONObject("position");
-                    String lat = jPos.optString("lat");
+                    lat.add(jPos.getDouble("lat"));
                     System.out.println(lat);
-                    String lng = jPos.optString("lng");
+                    lng.add(jPos.getDouble("lng"));
                     System.out.println(lng);
 
-                    String list = number + " " + name;
+                    String list = number + " " + name + "\n" + "Status: "+ status +"\n" + "Bikes Available: " + bikesAv + "\n" + "Stands Available: " + standAv ;
 
                     stations.add(list);
-                    //posLatLng.add(lat +", "+lng);
-                    //postLatLng
-                    //System.out.println(posLatLng);
+
 
 
                 }
